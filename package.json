@@ -1,0 +1,19 @@
+{
+  "name": "micro-translate",
+  "version": "1.0.0",
+  "description": "a micro based gtranslate api",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "deploy": "now"
+  },
+  "now": {
+    "alias": "translate.uchuu.io"
+  },
+  "keywords": [],
+  "author": "tomo@uchuu.io",
+  "dependencies": {
+    "google-translate-api": "https://github.com/teamsteamdev/google-translate-api.git",
+    "micro": "^7.3.2"
+  }
+}
