@@ -1,7 +1,6 @@
 const translate = require('google-translate-api');
 
 async function translator(text, language) {
-    console.log(text);
     return new Promise((resolve, reject) => {
         translate(text, {to: language})
             .then(resp => {
