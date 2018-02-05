@@ -1,18 +1,4 @@
-const translate = require('google-translate-api');
-
-async function translator(text, language) {
-    return new Promise((resolve, reject) => {
-        translate(text, {to: language})
-            .then(resp => {
-                const resJson = {
-                    text: resp.text
-                };
-                resolve(resJson);
-            }).catch(err => {
-                reject(err);
-            });
-    });
-}
+const translator = require('./translator');
 
 module.exports = async (req, res) => {
     if (req.url === '/') {
