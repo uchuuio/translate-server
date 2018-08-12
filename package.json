@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "micro",
-    "deploy": "now",
     "test": "jest --coverage && cat ./coverage/lcov.info | coveralls"
-  },
-  "now": {
-    "alias": "translate.uchuu.io"
   },
   "keywords": [],
   "author": "tomo@uchuu.io",
