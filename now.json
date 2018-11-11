@@ -1,3 +1,11 @@
 {
-  "alias": "translate.uchuu.io"
+  "version": 2,
+  "alias": "translate.uchuu.io",
+  "builds": [
+    { "src": "./index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" }
+  ],
+  "regions": ["bru"]
 }

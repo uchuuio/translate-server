@@ -1,11 +1,12 @@
 const translator = require('./translator');
+const {send} = require('micro');
 
 module.exports = async (req, res) => {
     if (req.url === '/') {
-        return {
+        return send(res, 500, {
             error: true,
             message: 'Please use the site via: /[countrycode]/[message]'
-        }
+        });
     }
 
     if (req.url !== '/favicon.ico') {
@@ -13,14 +14,15 @@ module.exports = async (req, res) => {
         const splitUrl = url.split('/', 2);
         const languageTo = splitUrl[0];
         if (languageTo === 'jp') {
-            return {
+            return send(res, 500, {
                 error: true,
                 message: 'If you\'re looking to translate into japanese, you must use ja instead'
-            }
+            })
         }
         const text = splitUrl[1];
         const decodedText = decodeURIComponent(text);
 
-        return await translator(decodedText, languageTo);
+        const translated = await translator(decodedText, languageTo);
+        return send(res, 200, translated);
     }
 };

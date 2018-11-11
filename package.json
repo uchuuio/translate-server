@@ -10,8 +10,8 @@
   "keywords": [],
   "author": "tomo@uchuu.io",
   "dependencies": {
-    "google-translate-api": "https://github.com/teamsteamdev/google-translate-api.git",
-    "micro": "^7.3.2"
+    "@k3rn31p4nic/google-translate-api": "^1.0.5",
+    "micro": "^9.3.3"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
