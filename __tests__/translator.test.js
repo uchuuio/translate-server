@@ -36,19 +36,11 @@ for (let i = 0; i < translations.length; i++) {
 test('returns an error when trying to use jp as the lang code', async () => {
     expect.assertions(1);
     const decodedText = decodeURIComponent('Hello');
-    await expect(translator(decodedText, 'jp')).rejects.toEqual(
-        expect.objectContaining({
-            message: "The language 'jp' is not supported"
-        })
-    );
+    await expect(translator(decodedText, 'jp')).rejects.toEqual("The language 'jp' is not supported.");
 });
 
 test('returns an error when trying to use an incorrect lang code', async () => {
     expect.assertions(1);
     const decodedText = decodeURIComponent('Hello');
-    await expect(translator(decodedText, 'asdfhgsd')).rejects.toEqual(
-        expect.objectContaining({
-            message: "The language 'asdfhgsd' is not supported"
-        })
-    );
+    await expect(translator(decodedText, 'asdfhgsd')).rejects.toEqual("The language 'asdfhgsd' is not supported.");
 });

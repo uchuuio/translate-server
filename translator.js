@@ -9,7 +9,7 @@ module.exports = async function translator(text, language) {
                 };
                 resolve(resJson);
             }).catch(err => {
-                reject(err);
+                reject(err.message);
             });
     });
 }
