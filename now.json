@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "micro-translate",
   "alias": "translate.uchuu.io",
   "builds": [
     { "src": "./index.js", "use": "@now/node" }
