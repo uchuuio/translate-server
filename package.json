@@ -1,6 +1,6 @@
 {
   "name": "micro-translate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a micro based gtranslate api",
   "main": "index.js",
   "scripts": {
@@ -10,11 +10,12 @@
   "keywords": [],
   "author": "tomo@uchuu.io",
   "dependencies": {
-    "@k3rn31p4nic/google-translate-api": "^1.0.5",
+    "@k3rn31p4nic/google-translate-api": "jqlu/google-translate-api#patch-1",
     "micro": "^9.3.3"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
-    "jest": "^22.1.4"
+    "jest": "^22.1.4",
+    "patch-package": "^5.1.1"
   }
 }
